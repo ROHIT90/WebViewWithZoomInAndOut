@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Keyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKX-4W-5hW">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="GYR-vx-5nh"/>
+                                    <constraint firstAttribute="height" constant="667" id="TuU-W6-Obp"/>
+                                </constraints>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yr-dR-ycK">
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Nep-ji-Z8h"/>
+                                    <constraint firstAttribute="width" constant="179" id="RDk-sZ-4PU"/>
+                                </constraints>
+                                <state key="normal" title="Zoom"/>
+                                <connections>
+                                    <action selector="zoomInButton_TouchUpInsideSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzT-ub-FIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-z5-Mjf">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="1av-jS-jAn"/>
+                                </constraints>
+                                <state key="normal" title="zoom out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomOutButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXM-9h-vHU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8yr-dR-ycK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Hw-xY-mef"/>
+                            <constraint firstItem="J8C-z5-Mjf" firstAttribute="leading" secondItem="8yr-dR-ycK" secondAttribute="trailing" constant="8" symbolic="YES" id="DHR-5P-Ofi"/>
+                            <constraint firstItem="FKX-4W-5hW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-56" id="K6B-YT-eRb"/>
+                            <constraint firstAttribute="trailing" secondItem="FKX-4W-5hW" secondAttribute="trailing" id="Nyy-0I-Jj4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8yr-dR-ycK" secondAttribute="bottom" id="Uwe-3m-q1k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J8C-z5-Mjf" secondAttribute="bottom" constant="9" id="aQl-HN-lUo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FKX-4W-5hW" secondAttribute="bottom" constant="56" id="g7e-gd-YJU"/>
+                            <constraint firstItem="FKX-4W-5hW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tmB-TY-Cdb"/>
+                            <constraint firstItem="J8C-z5-Mjf" firstAttribute="trailing" secondItem="FKX-4W-5hW" secondAttribute="trailing" id="xyh-M1-3Qu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FKX-4W-5hW" id="YG6-sp-aD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
